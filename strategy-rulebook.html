@@ -3,193 +3,352 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
 <meta name="theme-color" content="#071b31">
-<title>Goal-Scoring Moment — Strategy Visual Rulebook</title>
+<meta name="description" content="New-edition Strategy Mode rules for the Soccer Party Card Game. Hidden roles, team tactics, special Match and Referee cards.">
+<title>Soccer Party Card Game — Strategy Mode</title>
 <style>
-:root{--navy:#071b31;--navy2:#0c2d50;--blue:#1c62a8;--green:#169257;--green2:#25bd73;--red:#e33d4d;--gold:#ffd75a;--lime:#dfff72;--ink:#18324f;--paper:#f5f9fc;--muted:#60758b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#eaf2f8,#f8fbfd 560px);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}img{max-width:100%}a{color:inherit}.top{position:sticky;top:0;z-index:80;height:54px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 12px;background:#061829eb;color:#fff;border-bottom:2px solid #2c5d85;backdrop-filter:blur(12px)}.brand{font-weight:1000;font-size:12px;line-height:1}.brand span{color:var(--gold)}.brand small{display:block;margin-top:4px;color:#a9c7df;font-size:7px;letter-spacing:.16em}.topBtns{display:flex;gap:6px}.topBtn{border:1px solid #46739a;border-radius:9px;padding:7px 9px;background:#123a62;color:#fff;text-decoration:none;font-size:8px;font-weight:1000}.topBtn.gold{background:var(--gold);color:#5d4100;border-color:#ba8e1f}
-.hero{position:relative;overflow:hidden;min-height:360px;background:radial-gradient(circle at 78% 40%,#2d91d655 0 7%,transparent 34%),linear-gradient(135deg,#071b31 0%,#0d365e 55%,#061827 100%);color:#fff;border-bottom:6px solid var(--gold)}.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(110deg,transparent 0 65px,#ffffff08 65px 67px,transparent 67px 132px)}.heroInner{position:relative;z-index:2;max-width:1120px;margin:auto;padding:42px 390px 38px 22px}.kicker{font-size:9px;font-weight:1000;letter-spacing:.16em;color:var(--lime)}.hero h1{margin:8px 0 10px;font:clamp(48px,7vw,82px)/.88 Impact,"Arial Black",Arial,sans-serif;letter-spacing:.01em;text-shadow:4px 4px 0 #02101d}.hero h1 span{color:var(--gold)}.hero p{max-width:650px;margin:0;color:#d9e8f5;font-size:12px;font-weight:700;line-height:1.62}.heroBadges{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.heroBadge{padding:7px 9px;border:1px solid #6e9dc3;border-radius:999px;background:#0a2946d9;font-size:8px;font-weight:1000}.heroBadge.hot{background:#ffe274;color:#493300;border-color:#d4a929}.heroCards{position:absolute;right:26px;top:28px;width:335px;height:310px}.heroCards img{position:absolute;width:145px;height:205px;object-fit:contain;filter:drop-shadow(0 15px 12px #0009)}.heroCards img:nth-child(1){left:12px;top:72px;transform:rotate(-17deg)}.heroCards img:nth-child(2){left:95px;top:28px;transform:rotate(-3deg)}.heroCards img:nth-child(3){left:176px;top:70px;transform:rotate(15deg)}
-.wrap{max-width:1120px;margin:auto;padding:14px}.quick{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:0 0 13px}.q{min-height:92px;padding:12px;border-radius:15px;background:#fff;border:1px solid #c7d7e6;box-shadow:0 5px 15px #17375710}.q .ico{display:block;font-size:23px;margin-bottom:4px}.q b{display:block;color:#123a73;font-size:10px}.q span{display:block;margin-top:4px;font-size:9px;line-height:1.35;color:#60758b;font-weight:700}.toc{display:flex;gap:7px;overflow-x:auto;padding:2px 0 10px;scroll-snap-type:x proximity}.toc a{flex:0 0 auto;scroll-snap-align:start;background:#123a73;color:#fff;text-decoration:none;border-radius:10px;padding:9px 11px;font-size:9px;font-weight:950;white-space:nowrap}.sec{scroll-margin-top:68px;background:#fff;border:2px solid #c8d8e8;border-radius:19px;padding:18px;margin:12px 0;box-shadow:0 7px 22px #17375711;overflow:hidden}.sec h2{margin:0 0 11px;color:#123a73;font:1000 21px/1.1 "Arial Black",Arial,sans-serif}.sec h3{margin:13px 0 7px;color:#174f81;font-size:13px}.sec p,.sec li{font-size:11px;line-height:1.6;font-weight:650;color:#38536c}.sec ol,.sec ul{padding-left:20px}.sec li+li{margin-top:3px}.visualTitle{display:flex;align-items:center;gap:8px;margin:3px 0 11px;font-size:8px;font-weight:1000;letter-spacing:.1em;color:#476981}.visualTitle:after{content:"";height:1px;background:#d3e0eb;flex:1}.rule,.warn,.note{margin-top:11px;padding:11px 12px;border-radius:12px;font-size:10px;line-height:1.5;font-weight:800}.rule{background:#fff4c9;border:1px solid #e4b326;color:#705100}.warn{background:#fff0f1;border:1px solid #eb9aa1;color:#8b2630}.note{background:#edf7ff;border:1px solid #86b8df;color:#214d70}
-.goalVisual{display:grid;grid-template-columns:1fr 1fr;gap:12px}.goalRole{display:grid;grid-template-columns:118px 1fr;align-items:center;gap:12px;padding:14px;border-radius:16px;background:#f6fbff;border:1px solid #cbdceb}.goalRole img{width:108px;height:150px;object-fit:contain;filter:drop-shadow(0 8px 8px #18324f2b)}.goalRole strong{display:block;color:#123a73;font-size:12px}.tokenTrack{display:flex;align-items:center;gap:6px;margin-top:12px;flex-wrap:nowrap}.tokenStage{flex:1;min-width:56px;display:flex;flex-direction:column;align-items:center;gap:5px;padding:7px 5px;border-radius:12px;background:#f5f9fc;border:1px solid #c9d9e6;text-align:center}.tokenStage .token{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#eaf2f8;border:2px solid #7ba2c1;color:#123a73;font-weight:1000;font-size:10px}.tokenStage b{font-size:7px;line-height:1.05;color:#587086;letter-spacing:.03em}.tokenStage.hit{background:#fff9dc;border-color:#e3c45a}.tokenStage.hit .token{background:#ffd75a;border-color:#d5a922;color:#5c4100}.tokenStage.out{background:#fff0f2;border-color:#eba0aa}.tokenStage.out .token{background:#e33d4d;border-color:#a51e2b;color:#fff}.tokenStage.out b{color:#a12635}.tokenReveal{margin-top:3px;padding:3px 6px;border-radius:999px;background:#123a73;color:#fff!important;font-size:6px!important;line-height:1;font-weight:1000!important;white-space:nowrap}.arrow{flex:0 0 auto;color:#7391aa;font-weight:1000;font-size:14px}.token{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#eaf2f8;border:2px solid #7ba2c1;color:#123a73;font-weight:1000;font-size:9px}.token.hit{background:#ffd75a;border-color:#d5a922;color:#5c4100}.token.danger{background:#e33d4d;border-color:#a51e2b;color:#fff}@media(max-width:620px){.tokenTrack{gap:4px}.tokenStage{min-width:0;padding:6px 3px}.tokenStage .token{width:29px;height:29px;font-size:9px}.tokenStage b{font-size:6px}.tokenReveal{font-size:5.2px!important;padding:3px 4px}.arrow{font-size:11px}}
-.setupGrid{display:grid;grid-template-columns:190px 1fr;gap:13px;align-items:stretch}.possession{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:13px;border-radius:16px;background:#eef8ff;border:1px solid #a9cbe6;text-align:center}.possession img{width:118px;height:165px;object-fit:contain;filter:drop-shadow(0 8px 8px #18324f2b)}.possession b{margin-top:6px;color:#123a73;font-size:10px}.setupSteps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.setupStep{padding:12px;border-radius:14px;background:#f7fbff;border:1px solid #d0dfeb;text-align:center}.setupStep .n{width:25px;height:25px;margin:0 auto 6px;border-radius:50%;display:grid;place-items:center;background:#123a73;color:#fff;font-size:9px;font-weight:1000}.setupStep b{display:block;font-size:9px;color:#123a73}.setupStep p{font-size:8.5px;margin:4px 0 0;line-height:1.35}.rps{font-size:24px;margin:3px 0}.teamStrip{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin-top:10px;padding:9px;border-radius:13px;background:#071b31;color:#fff}.teamStrip>div{padding:8px;border-radius:10px;text-align:center;font-size:9px;font-weight:1000}.teamStrip .blue{background:#176eb1}.teamStrip .green{background:#168d55}.teamStrip .vs{color:#ffd75a;font-weight:1000}
-.teamRulesPanel{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.teamRuleCard{padding:14px;border-radius:16px;border:2px solid #c7d9e8;background:#f7fbff}.teamRuleCard.passRule{border-color:#65a7d9;background:#eef8ff}.teamRuleCard.outRule{border-color:#e9b65a;background:#fff9e6}.teamRuleIcon{font-size:28px;line-height:1}.teamRuleCard h3{margin:6px 0 5px;color:#123a73;font-size:14px}.teamRuleCard p{margin:0;font-size:10px;line-height:1.55}.teamRuleSteps{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:9px}.teamRuleStep{padding:6px 8px;border-radius:999px;background:#123a73;color:#fff;font-size:8px;font-weight:950}.teamRuleArrow{font-weight:1000;color:#7693aa}.teamRuleNote{margin-top:9px;padding:9px 10px;border-radius:11px;background:#071b31;color:#fff;font-size:9px;line-height:1.45;font-weight:850}.teamRuleNote strong{color:#ffd75a}@media(max-width:620px){.teamRulesPanel{grid-template-columns:1fr}.teamRuleCard{padding:12px}.teamRuleCard h3{font-size:13px}.teamRuleCard p{font-size:9.5px}}
-.orderFlow{display:flex;align-items:center;gap:7px;overflow-x:auto;padding:3px 2px 8px}.seat{flex:0 0 135px;padding:12px 10px;border-radius:14px;color:#fff;text-align:center;font-size:10px;font-weight:1000;box-shadow:0 5px 12px #0001}.seat.blue{background:#176eb1}.seat.green{background:#168d55}.seat.dead{background:#8f9baa;text-decoration:line-through;opacity:.7}.seat small{display:block;margin-top:3px;font-size:7px;font-weight:700;color:#e8f4ff}.flowArrow{flex:0 0 20px;color:#8da4b8;font-size:20px;font-weight:1000;text-align:center}.turnWheel{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.turnStep{position:relative;padding:13px 9px;border-radius:14px;background:#f7fbff;border:1px solid #cbdceb;text-align:center}.turnStep .ico{font-size:24px}.turnStep b{display:block;margin-top:5px;color:#123a73;font-size:9px}.turnStep p{font-size:8px;line-height:1.35;margin:4px 0 0}.turnStep:not(:last-child):after{content:"→";position:absolute;right:-10px;top:42%;z-index:2;color:#8099ae;font-weight:1000}
-.cardGuide{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.cardGuideItem{display:grid;grid-template-columns:92px 1fr;gap:9px;align-items:center;min-height:160px;padding:11px;border-radius:15px;background:#f7fbff;border:1px solid #cbdceb}.cardGuideItem img{width:86px;height:125px;object-fit:contain;filter:drop-shadow(0 7px 7px #18324f2c)}.cardGuideItem h3{margin:0 0 5px;font-size:11px}.cardGuideItem p{margin:0;font-size:8.7px;line-height:1.43}.micro{display:inline-block;margin-top:6px;padding:4px 6px;border-radius:999px;background:#e5eff8;color:#45627e;font-size:7px;font-weight:1000}.cardGuideItem.pass{background:#eef8ff;border-color:#9fc5e2}.cardGuideItem.yellow{background:#fff9db;border-color:#e2c458}.cardGuideItem.tackle{background:#f5ffed;border-color:#a8cb78}
-.attackStack{display:grid;grid-template-columns:1fr 1fr;gap:10px}.attackCase{padding:12px;border-radius:16px;background:#f7fbff;border:1px solid #cbdceb}.attackCase h3{margin:0 0 9px;font-size:10px}.attackFlow{display:flex;align-items:center;gap:5px;overflow-x:auto;padding-bottom:5px}.attackCard{flex:0 0 74px;text-align:center}.attackCard img{width:58px;height:86px;object-fit:contain;filter:drop-shadow(0 5px 5px #18324f2c)}.attackCard b{display:block;font-size:7px;color:#123a73;margin-top:2px}.attackResult{margin-top:8px;padding:8px;border-radius:10px;background:#071b31;color:#fff;font-size:8px;font-weight:900;line-height:1.35}.attackResult.goal{background:#982735}.attackResult.stop{background:#12653e}.miniArrow{font-weight:1000;color:#8099ae}.secondDefenseCost{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center;margin-top:10px;padding:10px;border-radius:13px;background:#fff6dc;border:1px solid #e1bd5c}.secondDefenseCost img{width:82px;height:113px;object-fit:contain}.secondDefenseCost b{display:block;color:#815d00;font-size:10px}.secondDefenseCost p{margin:3px 0 0;font-size:8.5px}
-.yellowVisual{display:grid;grid-template-columns:140px 1fr;gap:12px;align-items:center}.yellowVisual>div:first-child{text-align:center}.yellowVisual img{width:108px;height:155px;object-fit:contain;filter:drop-shadow(0 8px 8px #18324f2c)}.skipLine{display:flex;align-items:center;gap:6px;overflow-x:auto;padding:4px 0}.skipLine .seat{flex-basis:115px}.skipMark{flex:0 0 54px;padding:6px;border-radius:9px;background:#fff0f1;color:#b82835;border:1px solid #e49ba2;text-align:center;font-size:7px;font-weight:1000}.yellowFacts{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:9px}.fact{padding:9px;border-radius:11px;background:#fffbed;border:1px solid #e4cf7c;font-size:8.5px;font-weight:800;line-height:1.4;color:#6d5c11}
-.gkVisual{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}.gkVisual img{width:135px;height:190px;object-fit:contain;filter:drop-shadow(0 8px 8px #18324f2d)}.gkPassive{display:flex;align-items:center;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:4px}.gkStep{flex:0 0 145px;padding:10px;border-radius:12px;background:#f7fbff;border:1px solid #cbdceb;text-align:center;font-size:8px;font-weight:850;line-height:1.35}.gkStep.hot{background:#fff2f2;border-color:#e69aa0;color:#912a33}.gkStep.safe{background:#effbf4;border-color:#8bc5a7;color:#1d6b44}
-.edgeGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.edgeCard{padding:13px;border-radius:15px;background:#f7fbff;border:1px solid #cbdceb}.edgeCard .ico{font-size:27px}.edgeCard b{display:block;margin:5px 0;color:#123a73;font-size:10px}.edgeCard p{margin:0;font-size:8.7px;line-height:1.45}.faqGrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.faq{padding:10px 11px;border-radius:12px;background:#f7fbff;border:1px solid #cbdceb}.faq b{display:block;color:#123a73;font-size:9px}.faq span{display:block;margin-top:3px;color:#526b82;font-size:8.5px;font-weight:700;line-height:1.4}.back{display:block;width:max-content;margin:18px auto 7px;background:var(--green);color:#fff;text-decoration:none;border-radius:12px;padding:11px 18px;font-size:10px;font-weight:1000;box-shadow:0 4px 0 #0c653b}
-
-.beginnerSec{border-color:#e2b72e;background:linear-gradient(180deg,#fffdf3,#fff)}
-.firstTimeBanner{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:13px 14px;margin-bottom:13px;border-radius:15px;background:#071b31;color:#fff;border:2px solid #ffd75a}.firstTimeBanner .big{font:1000 30px/1 Impact,"Arial Black",Arial;color:#ffd75a;white-space:nowrap}.firstTimeBanner b{display:block;font-size:11px}.firstTimeBanner span{display:block;margin-top:3px;font-size:9px;line-height:1.4;color:#d8e8f5;font-weight:700}
-.cardTypes{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:10px 0 14px}.cardType{display:grid;grid-template-columns:78px 1fr;gap:9px;align-items:center;padding:10px;border-radius:14px;background:#f7fbff;border:1px solid #c9d9e8}.cardType img{width:72px;height:100px;object-fit:contain;filter:drop-shadow(0 5px 6px #18324f2b)}.cardType b{display:block;color:#123a73;font-size:10px}.cardType p{margin:4px 0 0;font-size:8.5px;line-height:1.4}.cardType.role img+img{margin-left:-38px}
-.exactSteps{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.exactStep{position:relative;padding:14px 13px 13px 52px;min-height:108px;border-radius:15px;background:#f8fbfe;border:1px solid #cbdceb}.exactStep .num{position:absolute;left:12px;top:12px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#123a73;color:#fff;font:1000 13px/1 Arial}.exactStep b{display:block;color:#123a73;font-size:10px}.exactStep p{margin:5px 0 0;font-size:9.2px;line-height:1.5}.exactStep strong{color:#8b5d00}
-.drawDefinition{margin:13px 0;padding:14px;border-radius:15px;background:#eaf6ff;border:2px solid #69a9d5}.drawDefinition b{display:block;color:#0c4d7d;font-size:13px}.drawDefinition p{margin:5px 0 0;font-size:10px;line-height:1.55}.drawDefinition strong{color:#b14d00}
-.firstTurnExample{margin-top:13px;padding:14px;border-radius:15px;background:#071b31;color:#fff}.firstTurnExample h3{margin:0 0 9px;color:#ffd75a}.firstTurnLine{display:flex;align-items:stretch;gap:6px;overflow-x:auto;padding-bottom:5px}.firstTurnBox{flex:0 0 150px;padding:10px;border-radius:12px;background:#123a62;border:1px solid #4e7da5;text-align:center}.firstTurnBox .n{display:block;color:#dfff72;font-size:9px;font-weight:1000}.firstTurnBox b{display:block;margin-top:3px;font-size:9px}.firstTurnBox span{display:block;margin-top:4px;color:#d7e7f4;font-size:7.8px;line-height:1.35;font-weight:700}.firstTurnArrow{flex:0 0 18px;display:grid;place-items:center;color:#ffd75a;font-weight:1000}
-.turnExplain{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:11px}.turnExplain>div{padding:11px;border-radius:12px;background:#f7fbff;border:1px solid #cbdceb}.turnExplain b{display:block;color:#123a73;font-size:9px}.turnExplain p{margin:4px 0 0;font-size:8.7px;line-height:1.45}
-@media(max-width:620px){.firstTimeBanner{grid-template-columns:1fr}.firstTimeBanner .big{font-size:26px}.cardTypes{grid-template-columns:1fr}.cardType{grid-template-columns:82px 1fr}.exactSteps{grid-template-columns:1fr}.exactStep{min-height:0}.firstTurnBox{flex-basis:165px}.turnExplain{grid-template-columns:1fr}}
-
-@media(max-width:850px){.heroInner{padding-right:310px}.heroCards{width:280px}.heroCards img{width:125px;height:182px}.heroCards img:nth-child(2){left:78px}.heroCards img:nth-child(3){left:148px}.quick{grid-template-columns:repeat(3,1fr)}.cardGuide{grid-template-columns:1fr 1fr}.turnWheel{grid-template-columns:repeat(3,1fr)}.turnStep:after{display:none}}
-@media(max-width:620px){.top{height:50px;padding:5px 7px}.brand{font-size:10px}.topBtn{font-size:7px;padding:6px 7px}.hero{min-height:auto}.heroInner{padding:26px 12px 245px}.hero h1{font-size:50px}.hero p{font-size:10.5px}.heroCards{right:50%;top:auto;bottom:10px;transform:translateX(50%);width:280px;height:225px}.heroCards img{width:116px;height:170px}.heroCards img:nth-child(1){left:5px;top:48px}.heroCards img:nth-child(2){left:82px;top:18px}.heroCards img:nth-child(3){left:157px;top:48px}.wrap{padding:9px}.quick{grid-template-columns:1fr 1fr;gap:6px}.q{min-height:84px;padding:10px}.toc{margin-bottom:3px}.sec{padding:13px;border-radius:15px}.sec h2{font-size:17px}.goalVisual{grid-template-columns:1fr}.goalRole{grid-template-columns:90px 1fr}.goalRole img{width:82px;height:115px}.setupGrid{grid-template-columns:1fr}.possession{display:grid;grid-template-columns:95px 1fr;text-align:left}.possession img{width:90px;height:125px;grid-row:1/3}.setupSteps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.setupStep{flex:0 0 180px;scroll-snap-align:start}.turnWheel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.turnStep{flex:0 0 165px;scroll-snap-align:start}.cardGuide{display:flex;overflow-x:auto;gap:8px;scroll-snap-type:x mandatory;padding-bottom:8px}.cardGuideItem{flex:0 0 270px;scroll-snap-align:start;grid-template-columns:92px 1fr}.attackStack{grid-template-columns:1fr}.yellowVisual{grid-template-columns:95px 1fr}.yellowVisual img{width:88px;height:125px}.yellowFacts{grid-template-columns:1fr}.gkVisual{grid-template-columns:95px 1fr}.gkVisual img{width:88px;height:125px}.edgeGrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.edgeCard{flex:0 0 225px;scroll-snap-align:start}.faqGrid{grid-template-columns:1fr}.sec p,.sec li{font-size:10px}.rule,.warn,.note{font-size:9px}}
-@media(max-width:360px){.hero h1{font-size:44px}.quick{grid-template-columns:1fr}.goalRole{grid-template-columns:80px 1fr}.cardGuideItem{flex-basis:250px}}
-
-/* Readable rule text and reflowing diagrams, including narrow phones. */
-.sec p,.sec li,.rule,.warn,.note,.teamRuleNote,.fact,.faq span,.firstTimeBanner span{font-size:16px;line-height:1.6}
-.sec h3,.sec h4{font-size:18px;line-height:1.35}
-.sec b,.sec strong,.q b,.possession b{font-size:inherit}
-.sec h2{line-height:1.25}
-.q b,.q span,.hero p{font-size:14px;line-height:1.5}
-.visualTitle,.micro,.teamRuleStep,.attackCard b,.tokenStage b,.tokenReveal,.seat small,.firstTurnBox .n{font-size:12px!important;line-height:1.4;white-space:normal}
-.attackResult,.seat,.gkStep,.firstTurnBox span,.firstTurnBox b,.exactStep b,.setupStep b,.turnStep b,.edgeCard b,.faq b,.cardType b,.turnExplain b,.teamStrip>div{font-size:14px;line-height:1.5}
-.toc a,.topBtn,.heroBadge{font-size:12px}
-.brand small{font-size:10px}
-.top{height:auto;min-height:60px;flex-wrap:wrap}
-.cardGuide{grid-template-columns:repeat(2,minmax(0,1fr))}
-.goalVisual{grid-template-columns:1fr}
-.turnWheel,.setupSteps{grid-template-columns:repeat(2,minmax(0,1fr))}
-.yellowVisual{grid-template-columns:1fr}
-.yellowVisual>div,.gkVisual>div,.goalRole>div{min-width:0}
-.yellowVisual img{height:110px}
-.skipLine,.orderFlow,.firstTurnLine,.gkPassive{flex-wrap:wrap;overflow:visible;gap:10px}
-.seat,.skipLine .seat{flex:1 1 130px}
-.firstTurnBox{flex:1 1 220px}
-.tokenTrack{flex-wrap:wrap}
-.tokenStage{flex:1 1 65px}
-.attackFlow{flex-wrap:wrap;overflow:visible}
-.attackCard{flex:1 1 74px}
-@media(max-width:760px){
- .wrap{padding:8px}.sec{padding:16px 12px;scroll-margin-top:100px}
- .sec h2{font-size:22px}.hero p{font-size:16px}
- .setupGrid,.teamRulesPanel,.exactSteps,.turnExplain,.attackStack,.faqGrid,.cardTypes{grid-template-columns:1fr}
- .setupSteps,.turnWheel,.cardGuide,.edgeGrid{display:grid;grid-template-columns:1fr;overflow:visible}
- .cardGuideItem{grid-template-columns:78px minmax(0,1fr);min-width:0}
- .cardGuideItem img{width:72px;height:104px}
- .goalRole,.gkVisual{grid-template-columns:1fr}.goalRole img,.gkVisual img{margin:auto}
- .firstTurnLine,.orderFlow,.skipLine,.gkPassive{flex-direction:column;align-items:stretch}
- .firstTurnBox,.seat,.skipLine .seat,.gkStep{flex:0 0 auto;width:100%}
- .firstTurnArrow,.flowArrow{flex:0 0 auto;transform:rotate(90deg);align-self:center}
- .turnStep:not(:last-child):after{display:none}
- .tokenStage{min-width:55px}.tokenReveal{padding:3px}
- .topBtns{flex-wrap:wrap}.brand{font-size:12px}
-}
+:root{--navy:#071b31;--navy2:#0d3458;--blue:#176eb1;--green:#168d55;--gold:#ffd75a;--lime:#dfff72;--ink:#18324f;--paper:#f5f9fc;--muted:#62788d;--line:#cbdceb;--red:#d94753;--purple:#7857b7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:linear-gradient(180deg,#eaf2f8,#f8fbfd 560px);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px max(16px,calc((100vw - 1120px)/2));background:#061829f2;color:#fff;border-bottom:2px solid #2c5d85;backdrop-filter:blur(12px)}
+.brand{font-weight:1000;font-size:12px;letter-spacing:.04em;text-decoration:none}
+.brand span{color:var(--gold)}
+.top a.back{padding:8px 11px;border-radius:9px;background:#123a62;color:#fff;text-decoration:none;font-size:10px;font-weight:900}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 35%,#2d91d655 0 8%,transparent 36%),linear-gradient(135deg,#071b31,#0d365e 58%,#061827);color:#fff;border-bottom:6px solid var(--gold)}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(110deg,transparent 0 65px,#ffffff08 65px 67px,transparent 67px 132px)}
+.heroInner{position:relative;max-width:1120px;margin:auto;padding:42px 22px 38px}
+.kicker{font-size:10px;font-weight:1000;letter-spacing:.18em;color:var(--lime);text-transform:uppercase}
+.hero h1{margin:10px 0 12px;font:clamp(42px,7vw,76px)/.94 Impact,"Arial Black",Arial,sans-serif;letter-spacing:.01em;text-shadow:4px 4px 0 #02101d}
+.hero p{max-width:760px;margin:0;color:#d9e8f5;font-size:15px;font-weight:700;line-height:1.6}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pill{padding:8px 11px;border:1px solid #6e9dc3;border-radius:999px;background:#0a2946d9;font-size:10px;font-weight:1000}
+.pill.gold{background:var(--gold);color:#493300;border-color:#d4a929}
+.wrap{max-width:1120px;margin:auto;padding:16px}
+.notice{padding:14px 16px;border-radius:14px;background:#fff7d9;border:1px solid #e2bd4d;color:#6c5100;font-size:13px;font-weight:800;line-height:1.55}
+.nav{display:flex;gap:7px;overflow-x:auto;padding:13px 0 7px}
+.nav a{flex:0 0 auto;padding:9px 12px;border-radius:10px;background:#123a73;color:#fff;text-decoration:none;font-size:10px;font-weight:950;white-space:nowrap}
+.section{scroll-margin-top:76px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:20px;margin:13px 0;box-shadow:0 7px 22px #17375711}
+.section h2{margin:0 0 12px;color:#123a73;font:1000 22px/1.15 "Arial Black",Arial,sans-serif}
+.section h3{margin:13px 0 6px;color:#174f81;font-size:16px}
+.section p,.section li{font-size:14px;line-height:1.6;color:#38536c;font-weight:600}
+.section ul,.section ol{padding-left:22px}
+.section li+li{margin-top:5px}
+.lead{font-size:15px!important}
+.rule{padding:13px 15px;margin:11px 0;border-radius:12px;background:#fff4c9;border:1px solid #e4b326;color:#705100;font-size:13px;line-height:1.55;font-weight:850}
+.info{padding:13px 15px;margin:11px 0;border-radius:12px;background:#edf7ff;border:1px solid #86b8df;color:#214d70;font-size:13px;line-height:1.55;font-weight:750}
+.warning{padding:13px 15px;margin:11px 0;border-radius:12px;background:#fff0f1;border:1px solid #eb9aa1;color:#8b2630;font-size:13px;line-height:1.55;font-weight:850}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{padding:15px;border:1px solid var(--line);border-radius:14px;background:#f7fbff}
+.card h3{margin:0 0 7px;font-size:15px}
+.card p{margin:0;font-size:13px}
+.tag{display:inline-block;margin:0 5px 5px 0;padding:5px 8px;border-radius:999px;background:#e7f0f8;color:#315a7c;font-size:10px;font-weight:1000;letter-spacing:.04em}
+.tag.blue{background:#e4f2ff;color:#135b91}
+.tag.green{background:#e4f7eb;color:#14643b}
+.tag.gold{background:#fff3c7;color:#795600}
+.tag.purple{background:#eee8ff;color:#59408f}
+.tag.red{background:#ffe8e9;color:#9b2834}
+.type{padding:15px;border-radius:15px;background:#f7fbff;border:1px solid var(--line)}
+.type h3{margin:0 0 8px;font-size:15px}
+.type .names{font-size:12px;line-height:1.8;color:#38536c;font-weight:800}
+.role{border-top:4px solid var(--blue)}
+.action{border-top:4px solid var(--green)}
+.referee{border-top:4px solid var(--purple)}
+.match{border-top:4px solid #d49a22}
+.soccer{border-top:4px solid #4b9bc8}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.step{padding:12px;border-radius:13px;background:#f7fbff;border:1px solid var(--line)}
+.step .n{display:grid;place-items:center;width:27px;height:27px;margin-bottom:8px;border-radius:50%;background:#123a73;color:white;font-weight:1000;font-size:12px}
+.step b{display:block;color:#123a73;font-size:12px}
+.step p{margin:5px 0 0;font-size:12px}
+.track{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.track .stage{padding:13px 8px;text-align:center;border-radius:13px;background:#f4f8fc;border:1px solid var(--line)}
+.stage strong{display:block;font-size:25px;color:#123a73}
+.stage small{display:block;margin-top:5px;font-size:10px;font-weight:900;color:#5a7186}
+.stage.reveal{background:#fff6d9;border-color:#e2bd4d}
+.stage.reveal strong{color:#9a6b00}
+.stage.out{background:#fff0f1;border-color:#e69ba2}
+.stage.out strong{color:#bb2938}
+.example{padding:14px;border-radius:14px;background:#071b31;color:white;margin:12px 0}
+.example h3{margin:0 0 9px;color:var(--gold)}
+.sequence{display:flex;align-items:center;gap:7px;overflow-x:auto;padding:6px 0}
+.seat{flex:0 0 auto;min-width:54px;padding:10px 12px;border-radius:11px;background:var(--blue);color:#fff;text-align:center;font-weight:1000}
+.seat.green{background:var(--green)}
+.seat.skip{background:#758494;opacity:.65;text-decoration:line-through}
+.arrow{flex:0 0 auto;color:var(--gold);font-weight:1000}
+.footer{padding:25px 10px;text-align:center;color:#6e8295;font-size:11px}
+@media(max-width:760px){.grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.heroInner{padding:32px 16px}.section{padding:15px}}
+@media(max-width:520px){.wrap{padding:9px}.grid,.grid.three{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.track{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:48px}.hero p{font-size:13px}.section h2{font-size:19px}.section p,.section li{font-size:13px}}
 </style>
 </head>
 <body>
-<header class="top"><div class="brand">GOAL-SCORING <span>MOMENT</span><small>STRATEGY MODE · VISUAL RULEBOOK</small></div><div class="topBtns"><a class="topBtn" href="index.html">BACK TO MODES</a><a class="topBtn gold" href="index.html">MODES</a></div></header>
-<section class="hero"><div class="heroInner"><div class="kicker">STRATEGY MODE · FIRST-TIME PLAYER GUIDE</div><h1>FOLLOW THE<br><span>NUMBERS.</span></h1><p>First time playing? Start with Step 1 and follow the guide in order. It shows you how to set up the table, what “draw 1” means, what to do on your turn, and how to make your first attack.</p><div class="heroBadges"><span class="heroBadge hot">HIDDEN GOALKEEPER</span><span class="heroBadge">TEAM STRATEGY</span><span class="heroBadge">CARD COMBOS</span><span class="heroBadge">REACTION CHAINS</span></div><div class="heroCards"><img src="images/shoot-card.webp" alt="Shoot"><img src="images/goalkeeper-card.webp" alt="Goalkeeper"><img src="images/defense-card.webp" alt="Defense"></div></div></section>
-<main class="wrap">
-<section class="quick"><div class="q"><span class="ico">🥅</span><b>WIN CONDITION</b><span>Eliminate the opposing Goalkeeper.</span></div><div class="q"><span class="ico">⚽</span><b>SOCCER = POSSESSION</b><span>The Soccer Card shows who controls the ball.</span></div><div class="q"><span class="ico">🃏</span><b>DRAW FIRST</b><span>Take the top card from the face-down Action Draw Pile and add it to your hand.</span></div><div class="q"><span class="ico">🛡️</span><b>TEAM DEFENSE</b><span>A living teammate may play DEFENSE for the target.</span></div><div class="q"><span class="ico">🟨</span><b>YELLOW SKIPS</b><span>It affects the next living player in the fixed turn order.</span></div></section>
-<nav class="toc"><a href="#start">START HERE</a><a href="#goal">1 · GOAL</a><a href="#setup">2 · SETUP</a><a href="#teamrules">TEAM RULES</a><a href="#order">3 · TURN ORDER</a><a href="#turn">4 · YOUR TURN</a><a href="#cards">5 · CARDS</a><a href="#attack">6 · ATTACK CHAINS</a><a href="#yellow">7 · YELLOW</a><a href="#tokens">8 · TOKENS & GK</a><a href="#edge">9 · EDGE CASES</a><a href="#faq">10 · FAQ</a></nav>
+<nav class="top">
+  <a class="brand" href="index.html">SOCCER PARTY <span>CARD GAME</span></a>
+  <a class="back" href="index.html">← ALL GAME MODES</a>
+</nav>
 
-
-<section class="sec beginnerSec" id="start">
-<h2>START HERE — DO THIS IN ORDER</h2>
-<div class="firstTimeBanner"><div class="big">FIRST GAME?</div><div><b>DO NOT TRY TO MEMORIZE EVERY CARD.</b><span>Set up the table first, then follow the steps in order. <strong>Whenever a player's turn begins, that player must first draw 1 Action Card from the top of the Draw Pile. Only after drawing may that player take normal actions.</strong></span></div></div>
-
-<div class="visualTitle">FIRST: KNOW THE 3 DIFFERENT KINDS OF CARDS</div>
-<div class="cardTypes">
-  <article class="cardType"><img src="images/player-card.webp" alt="Role card"><div><b>ROLE CARDS</b><p>PLAYER and GOALKEEPER tell you who you are. They are <strong>not</strong> Action Cards and are not part of your Action hand.</p></div></article>
-  <article class="cardType"><img src="images/soccer-card.webp" alt="Soccer card"><div><b>SOCCER CARD</b><p>This is the ball. It shows who has possession. Keep it separate from the Action deck.</p></div></article>
-  <article class="cardType"><img src="images/shoot-card.webp" alt="Action card"><div><b>ACTION CARDS</b><p>SHOOT, DEFENSE, TACKLE, DRIBBLE PAST, and YELLOW. These are the cards you shuffle, deal, draw, hold in your hand, and play.</p></div></article>
-</div>
-
-<div class="visualTitle">GAME GOAL</div>
-<div class="rule"><b>ELIMINATE THE OPPOSING GOALKEEPER TO WIN.</b> Your team wins immediately when the opposing Goalkeeper is eliminated. You do not need to eliminate every opponent.</div>
-
-<div class="visualTitle">SET UP THE GAME — ONE STEP AT A TIME</div>
-<div class="exactSteps">
-  <article class="exactStep"><span class="num">1</span><b>MAKE TWO TEAMS</b><p>Split everyone into <strong>BLUE</strong> and <strong>GREEN</strong> as evenly as possible. Each team must have exactly 1 Goalkeeper Role Card; all other Role Cards are Players.</p></article>
-  <article class="exactStep"><span class="num">2</span><b>GIVE EVERY PLAYER 1 ROLE CARD</b><p>For each team, prepare 1 GOALKEEPER plus enough PLAYER Role Cards for everyone else on that team. Shuffle each team’s Role Cards separately and deal 1 to each teammate. Keep roles hidden from opponents; teammates may privately share and know one another’s roles. Do <strong>not</strong> shuffle Role Cards into the Action deck.</p></article>
-  <article class="exactStep"><span class="num">3</span><b>PUT THE SOCCER CARD ASIDE</b><p>Do not shuffle the Soccer Card into the Action deck. It marks possession and moves from player to player during the game.</p></article>
-  <article class="exactStep"><span class="num">4</span><b>SHUFFLE ONLY THE ACTION CARDS</b><p>Shuffle SHOOT, DEFENSE, TACKLE, DRIBBLE PAST, and YELLOW together. This becomes the Action deck.</p></article>
-  <article class="exactStep"><span class="num">5</span><b>DEAL 5 ACTION CARDS TO EACH PLAYER</b><p>These 5 cards are your starting hand. <strong>There is no maximum hand size during the game.</strong> Hold them so other players cannot see them. Put all remaining Action Cards face-down in the middle. That face-down stack is the <strong>DRAW PILE</strong>. Leave space beside it for a face-up <strong>DISCARD PILE</strong>.</p></article>
-  <article class="exactStep"><span class="num">6</span><b>SET THE TURN ORDER</b><p>Choose the fixed circle of players before the game starts. Alternate BLUE and GREEN when possible. Keep this same order for the whole game.</p></article>
-  <article class="exactStep"><span class="num">7</span><b>ROCK–PAPER–SCISSORS FOR THE START</b><p>Use Rock–Paper–Scissors to determine one starting player. That player receives the Soccer Card and takes the first turn: draw 1 first, then take legal actions. Continue from that seat in the fixed turn order; do not rearrange the seats.</p></article>
-  <article class="exactStep"><span class="num">8</span><b>START THE FIRST TURN</b><p><strong>Before taking any normal action, DRAW 1.</strong> Take the top card from the face-down Draw Pile and add it to your hand. Then choose a legal action.</p></article>
-</div>
-
-<div class="drawDefinition"><b>WHAT DOES “DRAW 1” MEAN?</b><p>Take <strong>exactly 1 card from the TOP of the face-down Action Draw Pile</strong> and add it to your hand. Do not draw a Role Card or the Soccer Card. You do not have to play the card you just drew. Add it to your hand, then continue your turn.</p></div>
-
-<div class="visualTitle">YOUR FIRST TURN — COPY THIS EXAMPLE</div>
-<div class="firstTurnExample">
-  <h3>Example: BLUE 1 starts with the Soccer Card</h3>
-  <div class="firstTurnLine">
-    <div class="firstTurnBox"><span class="n">STEP 1</span><b>DRAW 1</b><span>BLUE 1 takes the top Action Card from the Draw Pile and adds it to their hand.</span></div><div class="firstTurnArrow">→</div>
-    <div class="firstTurnBox"><span class="n">STEP 2</span><b>CHECK THE SOCCER</b><span>BLUE 1 has the Soccer Card, so BLUE 1 currently has the ball.</span></div><div class="firstTurnArrow">→</div>
-    <div class="firstTurnBox"><span class="n">STEP 3</span><b>PLAY SHOOT</b><span>If BLUE 1 has SHOOT, play it face-up and choose one living GREEN opponent.</span></div><div class="firstTurnArrow">→</div>
-    <div class="firstTurnBox"><span class="n">STEP 4</span><b>GREEN MAY DEFEND</b><span>The target or a living GREEN teammate may play DEFENSE. If nobody does, the attack scores.</span></div><div class="firstTurnArrow">→</div>
-    <div class="firstTurnBox"><span class="n">STEP 5</span><b>RESOLVE THE RESULT</b><span>If the attack scores, the target gets +1 Token and the Soccer Card. If DEFENSE stops it after all responses resolve, no Token is given and the player who played the successful DEFENSE gets the Soccer Card.</span></div><div class="firstTurnArrow">→</div>
-    <div class="firstTurnBox"><span class="n">STEP 6</span><b>END THE TURN</b><span>When BLUE 1 is done taking legal actions, say “END TURN.” Follow the fixed turn order, skipping any turn affected by YELLOW. The next normal turn starts with DRAW 1.</span></div>
+<header class="hero">
+  <div class="heroInner">
+    <div class="kicker">New Edition · Rulebook</div>
+    <h1>STRATEGY MODE</h1>
+    <p>Hidden roles, smart team play, and tactical surprises. Work together, protect your Goalkeeper, and use special Match and Referee cards at the right moment.</p>
+    <div class="pills">
+      <span class="pill gold">4 ROLE TYPES</span>
+      <span class="pill">6 ACTION CARD NAMES</span>
+      <span class="pill">5 MATCH CARD TYPES</span>
+      <span class="pill">3 REFEREE CARDS</span>
+    </div>
   </div>
-</div>
+</header>
 
-<div class="rule"><b>THE MOST IMPORTANT BEGINNER RULE:</b> After Rock–Paper–Scissors determines the starting player, having the Soccer Card does <strong>not</strong> decide whose turn it is. The fixed turn order decides whose turn it is. When your normal turn starts, draw 1 first — even if you already have the Soccer Card.</div>
-</section>
+<main class="wrap">
+  <div class="notice"><strong>New-edition update:</strong> This page replaces the previous Strategy Mode rules that used the old 3-Token elimination and Goalkeeper auto-save system. The new rules below reflect the decisions confirmed so far. Exact card quantities and a few remaining Action Card details are still being finalized.</div>
 
-<section class="sec" id="goal"><h2>1 — GAME GOAL</h2><div class="rule"><b>ELIMINATE THE OPPOSING GOALKEEPER TO WIN.</b> Your team wins immediately when the opposing Goalkeeper is eliminated. You do not need to eliminate every opponent — once the opposing Goalkeeper is OUT and revealed, the game ends immediately.</div><div class="visualTitle">WHO ARE YOU TRYING TO ELIMINATE?</div><div class="goalVisual"><div class="goalRole"><img src="images/player-card.webp" alt="Player Role"><div><strong>NORMAL PLAYER</strong><p>The Role Card stays hidden from opponents at 0, 1, and 2 Tokens. Teammates may know it. When a player receives a third Token, that player is eliminated. <b>Only after being eliminated do they reveal their Role Card.</b></p><div class="tokenTrack"><div class="tokenStage"><span class="token">0</span><b>HIDDEN</b></div><span class="arrow">→</span><div class="tokenStage hit"><span class="token">1</span><b>HIDDEN</b></div><span class="arrow">→</span><div class="tokenStage hit"><span class="token">2</span><b>STILL HIDDEN</b></div><span class="arrow">→</span><div class="tokenStage out"><span class="token">3</span><b>OUT</b><span class="tokenReveal">THEN REVEAL</span></div></div></div></div><div class="goalRole"><img src="images/goalkeeper-card.webp" alt="Goalkeeper Role"><div><strong>GOALKEEPER</strong><p>The Goalkeeper stays hidden from opponents through 2 Tokens; teammates may know the role. Once the Goalkeeper has 2 Tokens, the one-time Goalkeeper passive is armed. The next opponent attack that would score the third goal is automatically canceled once: <b>no 3rd Token is added</b>, the Soccer Card goes to the Goalkeeper, and the passive is used. The next successful goal after that gives the 3rd Token, eliminates the Goalkeeper, reveals the Role Card, and ends the game immediately.</p><div class="tokenTrack"><div class="tokenStage"><span class="token">0</span><b>HIDDEN</b></div><span class="arrow">→</span><div class="tokenStage hit"><span class="token">1</span><b>HIDDEN</b></div><span class="arrow">→</span><div class="tokenStage hit"><span class="token">2</span><b>PASSIVE ARMED</b></div><span class="arrow">→</span><div class="tokenStage hit"><span class="token">3rd</span><b>AUTO-SAVE · NO TOKEN</b></div><span class="arrow">→</span><div class="tokenStage out"><span class="token">4th</span><b>3RD TOKEN · OUT</b><span class="tokenReveal">REVEAL GK</span></div></div></div></div></div><div class="rule"><b>NORMAL PLAYER:</b> the 3rd Token eliminates that player, then the Role Card is revealed. <b>GOALKEEPER:</b> after 2 Tokens, the next would-be scoring goal is automatically canceled once. No 3rd Token is added. The following successful goal gives the 3rd Token, eliminates the Goalkeeper, and ends the game.</div></section>
+  <nav class="nav" aria-label="Strategy Mode sections">
+    <a href="#overview">OVERVIEW</a>
+    <a href="#card-types">CARD TYPES</a>
+    <a href="#roles">ROLE CARDS</a>
+    <a href="#turns">YOUR TURN</a>
+    <a href="#actions">ACTION CARDS</a>
+    <a href="#match-cards">MATCH CARDS</a>
+    <a href="#referee-cards">REFEREE CARDS</a>
+    <a href="#rewards">SPECIAL REWARDS</a>
+    <a href="#substitution">SUBSTITUTION</a>
+  </nav>
 
-<section class="sec" id="setup"><h2>2 — SETUP</h2><div class="setupGrid"><div class="possession"><img src="images/soccer-card.webp" alt="Soccer Card"><b>SOCCER CARD = POSSESSION</b><p>Keep it separate from the Action deck. The player holding the Soccer Card has possession.</p></div><div><div class="setupSteps"><div class="setupStep"><span class="n">1</span><div class="rps">👥</div><b>TEAMS + ROLES</b><p>Split the players into BLUE and GREEN teams. Deal each team its own shuffled Role Cards: exactly 1 Goalkeeper and the remaining Players. Hide roles from opponents only; teammates may know each other’s roles.</p></div><div class="setupStep"><span class="n">2</span><div class="rps">🃏 ×5</div><b>5 ACTION CARDS EACH</b><p>Shuffle only the Action Cards. Deal 5 to each player, then place the rest face-down in the middle as the Draw Pile.</p></div><div class="setupStep"><span class="n">3</span><div class="rps">✊ ✋ ✌️</div><b>RPS + SOCCER</b><p>Use Rock–Paper–Scissors to determine one starting player. Give that player the Soccer Card; they draw 1 and take the first turn. Keep the fixed seating order.</p></div></div><div class="teamStrip"><div class="blue">BLUE TEAM<br>1 GK + PLAYERS</div><div class="vs">VS</div><div class="green">GREEN TEAM<br>1 GK + PLAYERS</div></div></div></div><div class="note"><b>TWO PEOPLE:</b> Choose Goalkeeper vs. Goalkeeper (one role each), or let each person control two roles for their team: one Goalkeeper and one Player. With two roles each, keep a separate hand and Token count for each role, deal 5 Action Cards to each role, and give each role its own seat in the fixed turn order. YELLOW works the same in both setups.</div><div class="note"><b>BEFORE THE FIRST PLAYER DOES ANYTHING:</b> make sure everyone has 1 Role Card, 5 Action Cards, the remaining Action Cards are face-down as the Draw Pile, the Soccer Card is with the starting player, and the fixed turn order is clear.</div></section>
+  <section class="section" id="overview">
+    <h2>1 — GAME OBJECTIVE & GOAL RULES</h2>
+    <p class="lead"><strong>Your team wins by eliminating the opposing Goalkeeper.</strong> A Goalkeeper is eliminated after conceding 4 goals. No other role is eliminated by conceding goals.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>PLAYER · DEFENDER · FORWARD</h3>
+        <div class="track">
+          <div class="stage"><strong>1</strong><small>HIDDEN</small></div>
+          <div class="stage"><strong>2</strong><small>HIDDEN</small></div>
+          <div class="stage reveal"><strong>3</strong><small>REVEAL ROLE</small></div>
+          <div class="stage"><strong>4+</strong><small>STAY IN GAME</small></div>
+        </div>
+        <p>After conceding 3 goals, reveal your Role Card. You remain in the game, can keep taking turns, and can continue using your Role skill. You are <strong>never eliminated by goals</strong>.</p>
+      </article>
+      <article class="card">
+        <h3>GOALKEEPER</h3>
+        <div class="track">
+          <div class="stage"><strong>1</strong><small>HIDDEN</small></div>
+          <div class="stage"><strong>2</strong><small>HIDDEN</small></div>
+          <div class="stage reveal"><strong>3</strong><small>REVEAL ROLE</small></div>
+          <div class="stage out"><strong>4</strong><small>ELIMINATED</small></div>
+        </div>
+        <p>The Goalkeeper's Role Card is revealed after conceding 3 goals. The Goalkeeper remains in the game at 3 goals and is eliminated only after conceding the 4th goal.</p>
+      </article>
+    </div>
+    <div class="rule"><strong>IDENTITY REVEAL DOES NOT MEAN ELIMINATION.</strong> A revealed player stays in the game. All players may continue taking turns and using their Role skills after their identities are public.</div>
+    <div class="info"><strong>Track two separate personal totals:</strong> goals conceded by each player, and valid goals scored by each player. The Soccer Card only shows possession; it is not a goal counter.</div>
+  </section>
 
+  <section class="section" id="card-types">
+    <h2>2 — CARD TYPES & CARD NAMES</h2>
+    <p>Strategy Mode uses five card types. PASS is a free action and does not have its own card.</p>
+    <div class="grid three">
+      <article class="type role">
+        <h3>ROLE CARDS · 4 ROLES</h3>
+        <div class="names">GOALKEEPER<br>PLAYER<br>DEFENDER<br>FORWARD</div>
+      </article>
+      <article class="type action">
+        <h3>ACTION CARDS · 6 NAMES</h3>
+        <div class="names">SHOOT<br>DRIBBLE PAST<br>DEFENSE<br>TACKLE<br>YELLOW CARD!<br>COUNTERATTACK</div>
+      </article>
+      <article class="type referee">
+        <h3>REFEREE CARDS · 3 CARDS</h3>
+        <div class="names">IDENTITY REVEAL <small>(working name)</small><br>VAR REVIEW<br>PENALTY KICK</div>
+        <p>One copy of each Referee ability.</p>
+      </article>
+      <article class="type match">
+        <h3>MATCH CARDS · 5 TYPES</h3>
+        <div class="names">HALFTIME<br>SUBSTITUTION<br>CORNER KICK<br>TEAM HUDDLE<br>KICKOFF</div>
+        <p>Final quantities are still being decided.</p>
+      </article>
+      <article class="type soccer">
+        <h3>SOCCER CARD · 1 CARD</h3>
+        <div class="names">SOCCER</div>
+        <p>Replaces the mini soccer piece and shows who has possession. Keep it separate from the Action deck.</p>
+      </article>
+    </div>
+    <div class="info"><strong>Separate supplies:</strong> Role Cards are dealt to players. Action Cards form the draw and discard piles. Match and Referee Cards stay in a limited reward supply. The Soccer Card stays outside the Action deck.</div>
+  </section>
 
-<section class="sec" id="teamrules">
-<h2>TEAM RULES — PASSING & ELIMINATED PLAYERS</h2>
-<div class="visualTitle">TWO RULES EVERY TEAM MUST KNOW</div>
-<div class="teamRulesPanel">
-  <article class="teamRuleCard passRule">
-    <div class="teamRuleIcon">⚽➡️🤝</div>
-    <h3>PASS TO A TEAMMATE — NO CARD NEEDED</h3>
-    <p>If you have the Soccer Card, you may pass it to a living teammate <strong>only during your own turn</strong>. PASS does not use an Action Card. The immediate ball handoff when a PLAYER is eliminated is an exception to the own-turn rule; see below.</p>
-    <div class="teamRuleSteps"><span class="teamRuleStep">YOUR TURN STARTS</span><span class="teamRuleArrow">→</span><span class="teamRuleStep">DRAW 1 FIRST</span><span class="teamRuleArrow">→</span><span class="teamRuleStep">PASS SOCCER</span></div>
-    <div class="teamRuleNote"><strong>IMPORTANT:</strong> The teammate who receives the Soccer Card gains possession, but does not immediately take a turn.</div>
-  </article>
-  <article class="teamRuleCard outRule">
-    <div class="teamRuleIcon">3️⃣💥🃏🤝</div>
-    <h3>PLAYER OUT — TRANSFER THE BALL & HAND</h3>
-    <p>When a normal PLAYER receives the 3rd Token, eliminate that player first, then reveal the Role Card. Give the eliminated player's remaining Action Cards to a living teammate. If they received the Soccer Card from that goal, they immediately pass it to a living teammate of their choice before play continues. This elimination handoff is allowed outside their own turn and does not start the recipient’s turn.</p>
-    <div class="teamRuleSteps"><span class="teamRuleStep">3RD TOKEN</span><span class="teamRuleArrow">→</span><span class="teamRuleStep">OUT</span><span class="teamRuleArrow">→</span><span class="teamRuleStep">REVEAL ROLE</span><span class="teamRuleArrow">→</span><span class="teamRuleStep">BALL + HAND → TEAMMATE</span></div>
-    <div class="teamRuleNote"><strong>STILL PART OF THE TEAM:</strong> An eliminated player may still talk with the team, discuss strategy, and give advice. They may not take turns or play cards.</div>
-  </article>
-</div>
-</section>
+  <section class="section" id="roles">
+    <h2>3 — ROLE CARDS & ROLE SKILLS</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag blue">ROLE CARD</span>
+        <h3>GOALKEEPER</h3>
+        <p><strong>Role rule:</strong> You are eliminated after conceding 4 goals. Your identity is revealed after conceding 3 goals.</p>
+      </article>
+      <article class="card">
+        <span class="tag blue">ROLE CARD</span>
+        <h3>PLAYER</h3>
+        <p><strong>Skill:</strong> Draw 1 Action Card. Using your Role skill reveals your identity.</p>
+      </article>
+      <article class="card">
+        <span class="tag blue">ROLE CARD</span>
+        <h3>DEFENDER</h3>
+        <p><strong>Skill:</strong> You may use DRIBBLE PAST as DEFENSE. Using your Role skill reveals your identity.</p>
+      </article>
+      <article class="card">
+        <span class="tag blue">ROLE CARD</span>
+        <h3>FORWARD</h3>
+        <p><strong>Skill:</strong> You may use DRIBBLE PAST as RUN. Using your Role skill reveals your identity.</p>
+      </article>
+    </div>
+    <div class="rule"><strong>ROLE SKILL TIMING:</strong> Role skills may only be used during your own turn. Using a Role skill reveals your identity. Once revealed, you can still use your Role skill normally.</div>
+    <div class="info"><strong>FORWARD NOTE:</strong> RUN is a role-skill action conversion. Its exact resolution will be described when the Action Card abilities are finalized.</div>
+  </section>
 
-<section class="sec" id="order"><h2>3 — FIXED TURN ORDER</h2><p>Set a fixed turn order before the game. Alternate teams when possible.</p><div class="visualTitle">NORMAL OPENING ORDER</div><div class="orderFlow"><div class="seat blue">BLUE 1<small>TURN 1</small></div><div class="flowArrow">→</div><div class="seat green">GREEN 1<small>TURN 2</small></div><div class="flowArrow">→</div><div class="seat blue">BLUE 2<small>TURN 3</small></div><div class="flowArrow">→</div><div class="seat green">GREEN 2<small>TURN 4</small></div><div class="flowArrow">→</div><div class="seat blue">BLUE 1<small>REPEAT</small></div></div><div class="visualTitle">IF GREEN 1 IS ELIMINATED</div><div class="orderFlow"><div class="seat blue">BLUE 1</div><div class="flowArrow">→</div><div class="seat dead">GREEN 1<small>SKIP FOREVER</small></div><div class="flowArrow">→</div><div class="seat blue">BLUE 2</div><div class="flowArrow">→</div><div class="seat green">GREEN 2</div><div class="flowArrow">→</div><div class="seat blue">BLUE 1</div></div><div class="rule">Possession does not change the turn order. PASS does not give the receiving player an immediate turn. After a player is eliminated, skip that seat — do not renumber the players or force the team colors to alternate. An eliminated PLAYER may still talk with the team and give advice, but may not take turns or play cards.</div></section>
+  <section class="section" id="turns">
+    <h2>4 — SETUP & YOUR NORMAL TURN</h2>
+    <div class="steps">
+      <article class="step"><span class="n">1</span><b>MAKE TWO TEAMS</b><p>Split players into BLUE and GREEN teams. Each team has one Goalkeeper; the remaining roles are assigned from PLAYER, DEFENDER, and FORWARD. Exact role-card quantities will be set with the final deck list.</p></article>
+      <article class="step"><span class="n">2</span><b>DEAL ROLE CARDS</b><p>Give each player one Role Card. Keep it hidden from opponents. Teammates may privately share their roles.</p></article>
+      <article class="step"><span class="n">3</span><b>PREPARE ACTION CARDS</b><p>Shuffle the Action Cards and deal 5 to each player. Put the remaining Action Cards face-down as the Draw Pile. Leave space for a face-up Discard Pile.</p></article>
+      <article class="step"><span class="n">4</span><b>SET UP SPECIAL CARDS</b><p>Place the Match and Referee Cards in a separate, limited reward supply. Keep the Soccer Card outside the Action deck.</p></article>
+    </div>
+    <div class="rule"><strong>EVERY NORMAL TURN STARTS WITH DRAW 1.</strong> At the beginning of your turn, draw 1 Action Card from the top of the Draw Pile before taking any action. Add it to your hand; you do not have to play the card you just drew.</div>
+    <ol>
+      <li>Draw 1 Action Card.</li>
+      <li>Check who currently holds the Soccer Card.</li>
+      <li>Take any legal action available to you.</li>
+      <li>Resolve all responses and effects before starting another action.</li>
+      <li>When finished, end your turn. Play continues in the established turn order unless a card effect changes it.</li>
+    </ol>
+    <div class="info"><strong>PASS IS FREE.</strong> If you hold the Soccer Card, you may pass it to a living teammate during your own turn. PASS does not require or consume an Action Card and does not give the receiving teammate an immediate turn.</div>
+  </section>
 
-<section class="sec" id="turn"><h2>4 — YOUR NORMAL TURN: DO THESE STEPS EVERY TIME</h2><div class="drawDefinition"><b>STEP 1 IS ALWAYS DRAW 1</b><p>Unless YELLOW caused you to skip your turn, take the top card from the face-down Action Draw Pile and add it to your hand. <strong>Do this before PASS, SHOOT, TACKLE, or any other normal action on your turn.</strong></p></div><div class="turnWheel"><div class="turnStep"><span class="ico">🃏</span><b>1 · DRAW 1 ACTION CARD</b><p>Take the top card of the face-down Draw Pile and add it to your hand.</p></div><div class="turnStep"><span class="ico">⚽</span><b>2 · LOOK FOR THE SOCCER CARD</b><p>If you hold the Soccer Card, you have possession. If another player holds it, that player has possession.</p></div><div class="turnStep"><span class="ico">🎴</span><b>3 · CHOOSE A LEGAL ACTION</b><p>If you have the Soccer Card, you may PASS it to a living teammate for free or play SHOOT, but only during <strong>your own turn</strong>. PASS does not require a card. If you do not have the Soccer Card, you may use TACKLE to take possession. Other cards may be played when their timing allows.</p></div><div class="turnStep"><span class="ico">🔗</span><b>4 · FINISH THAT ACTION COMPLETELY</b><p>Resolve the defending team’s DEFENSE and the original attacker’s optional DRIBBLE PAST completely before taking another normal action.</p></div><div class="turnStep"><span class="ico">➡️</span><b>5 · END YOUR TURN WHEN YOU ARE DONE</b><p>Say “END TURN.” Play moves to the next living player in the fixed turn order, skipping any turn affected by YELLOW. The next normal turn starts with DRAW 1.</p></div></div><div class="turnExplain"><div><b>IF YOU HAVE THE SOCCER CARD</b><p>You have possession, but that does not give you an extra turn. Wait for your place in the fixed turn order. When your turn begins, draw 1 card first, then take your actions.</p></div><div><b>IF YOU DO NOT HAVE THE SOCCER CARD</b><p>You still take your normal turn. Draw 1 card first. You may then play any legal card, such as TACKLE when allowed, or end your turn if you cannot or do not want to take another action.</p></div></div><div class="rule"><b>NO ACTION LIMIT:</b> After drawing 1, you may take as many legal actions as you want. There is no one-card-per-turn limit. Keep taking legal actions, or say “END TURN” when you decide to stop. Playing a reaction during another player’s turn does not start your own turn.</div><div class="note">Passing, scoring, having your attack stopped, using TACKLE, or losing possession does not automatically end your turn. Finish the current action, then either take another legal action or announce “END TURN.”</div></section>
+  <section class="section" id="actions">
+    <h2>5 — ACTION CARDS</h2>
+    <div class="grid">
+      <article class="card"><h3>SHOOT</h3><p>Starts an attack. The attacking player must have the Soccer Card and chooses an opposing player as the target.</p></article>
+      <article class="card"><h3>DRIBBLE PAST</h3><p>An attacking move. It can also be used for the role conversions listed on the DEFENDER and FORWARD Role Cards.</p></article>
+      <article class="card"><h3>DEFENSE</h3><p>Used to defend against an opposing attack. Teammates may communicate and decide who will play the defensive card.</p></article>
+      <article class="card"><h3>TACKLE</h3><p>Steal the Soccer Card from any player. You may tackle an opponent or a teammate.</p></article>
+      <article class="card"><h3>YELLOW CARD!</h3><p>The card name is confirmed. Its new effect is still being finalized; the previous automatic next-player skip rule is not carried forward here.</p></article>
+      <article class="card"><h3>COUNTERATTACK</h3><p>After a successful DEFENSE, play COUNTERATTACK to launch an immediate counterattack. No SHOOT card is required. The opposing team may respond with only one DEFENSE.</p></article>
+    </div>
+    <div class="rule"><strong>COUNTERATTACK & TURN ORDER:</strong> The counterattack does not give the defender an extra normal turn. Example: A attacks, D successfully defends and plays COUNTERATTACK, and A gets one chance to play DEFENSE. When the full sequence ends, the next normal player is B—not D.</div>
+    <div class="info">The exact timing, limits, and card interactions for SHOOT, DRIBBLE PAST, DEFENSE, and YELLOW CARD! will be finalized in the next Action Card review.</div>
+  </section>
 
-<section class="sec" id="cards"><h2>5 — ACTION CARDS</h2><div class="rule"><b>PLAY → RESOLVE → DISCARD:</b> Play Action Cards face-up. Keep cards in the current attack chain visible until the entire attack resolves, then put all played Action Cards in the face-up Discard Pile. Other Action Cards go there when their effect finishes resolving; extra discard costs also go there. Never discard the Soccer Card or Role Cards. When the Draw Pile runs out, shuffle the discarded Action Cards to form a new face-down Draw Pile.</div><div class="visualTitle">MATCH THE RULE TO THE CARD IN YOUR HAND</div><div class="cardGuide"><article class="cardGuideItem pass"><img src="images/soccer-card.webp" alt="Soccer"><div><h3>PASS</h3><p><strong>PASS is free and does not require a card.</strong> If you hold the Soccer Card, you may give it to a living teammate <strong>only during your own turn</strong> after your required draw. Your turn continues after the pass. Exception: an eliminated PLAYER immediately hands the ball to a living teammate, even outside their own turn.</p><span class="micro">NO PASS CARD · OWN TURN ONLY</span></div></article><article class="cardGuideItem"><img src="images/shoot-card.webp" alt="Shoot"><div><h3>SHOOT</h3><p>On your own turn, you must have the Soccer Card to play SHOOT. Choose 1 living opponent as the target, then give the defending team a chance to respond.</p></div></article><article class="cardGuideItem"><img src="images/defense-card.webp" alt="Defense"><div><h3>DEFENSE</h3><p>The target or any living teammate may play DEFENSE. Teammates may communicate and choose who plays it; play only one DEFENSE at each response opportunity. If it successfully stops the attack, the player who played DEFENSE receives the Soccer Card.</p></div></article><article class="cardGuideItem"><img src="images/dribble%20past-card.webp" alt="Dribble Past"><div><h3>DRIBBLE PAST</h3><p>Only the player who played SHOOT may play DRIBBLE PAST, after the first DEFENSE. It bypasses that DEFENSE and continues the same attack. A teammate cannot play it for you. Maximum 1 DRIBBLE PAST per SHOOT; the defending team may then play one final DEFENSE.</p></div></article><article class="cardGuideItem"><img src="images/defense-card.webp" alt="Second Defense"><div><h3>SECOND DEFENSE</h3><p>After DRIBBLE PAST, the target or any living teammate may play the second and final DEFENSE. This may be the same defender or a different teammate. Play 1 DEFENSE + discard 1 additional Action Card if you still have one.</p><span class="micro">HAND BECOMES 0? NO EXTRA DISCARD</span></div></article><article class="cardGuideItem tackle"><img src="images/tackle.webp?v=20260904tackle2" alt="Tackle"><div><h3>TACKLE</h3><p>TACKLE has only one function: take the Soccer Card from another player on your own turn. It cannot stop SHOOT and is not a defensive response. DEFENSE cannot stop TACKLE. Your turn continues, with no fixed limit on regaining possession and attacking again as long as each action is legal.</p></div></article><article class="cardGuideItem yellow"><img src="images/yellow-card.webp" alt="Yellow"><div><h3>YELLOW CARD</h3><p>Play YELLOW only on your own turn. The next living player in the fixed turn order skips one normal turn. You do not choose the target. Multiple YELLOW cards on the same turn still skip only that same player’s one turn.</p><span class="micro">SEE SECTION 7</span></div></article></div></section>
+  <section class="section" id="match-cards">
+    <h2>6 — MATCH CARDS</h2>
+    <div class="grid">
+      <article class="card"><span class="tag gold">MATCH CARD</span><h3>HALFTIME</h3><p>Both teams may exchange cards freely within their own team. After all team exchanges are complete, the player who used HALFTIME draws 5 Action Cards.</p></article>
+      <article class="card"><span class="tag gold">MATCH CARD</span><h3>SUBSTITUTION</h3><p>Swap Role Cards with a teammate. Each player's conceded-goal count and identity-reveal status stay with that player; they do not move with the Role Card.</p></article>
+      <article class="card"><span class="tag gold">MATCH CARD</span><h3>CORNER KICK</h3><p>After a SHOOT is successfully stopped by DEFENSE, play CORNER KICK to earn a corner. Restart the attack with SHOOT. The attack can still use DRIBBLE PAST, and the defending team can still play DEFENSE. Resolve the new attack through the normal attack process.</p></article>
+      <article class="card"><span class="tag gold">MATCH CARD</span><h3>TEAM HUDDLE</h3><p>Your team may freely give, receive, and exchange cards among teammates. There is no exchange limit, no required equal trade, and no card-count restriction.</p></article>
+      <article class="card"><span class="tag gold">MATCH CARD</span><h3>KICKOFF</h3><p>Choose a teammate to take the kickoff. Give them the Soccer Card even if another player currently holds it. The chosen teammate immediately starts a normal turn and draws 1 Action Card first. The turn order then continues from the kicker's seat.</p></article>
+    </div>
+    <div class="example">
+      <h3>KICKOFF EXAMPLE · A, B, C, D, E, F</h3>
+      <p style="color:#e1edf7;margin:0">A uses KICKOFF and chooses teammate E. The Soccer Card moves to E, even if B, C, D, or F held it. B, C, and D skip their upcoming turns. E immediately draws 1 and takes the kickoff turn. After E, play continues from E's seat: F → A → B → C → D.</p>
+      <div class="sequence">
+        <span class="seat">A</span><span class="arrow">→</span>
+        <span class="seat skip">B</span><span class="arrow">→</span>
+        <span class="seat skip">C</span><span class="arrow">→</span>
+        <span class="seat skip">D</span><span class="arrow">→</span>
+        <span class="seat green">E ⚽</span><span class="arrow">→</span>
+        <span class="seat">F</span><span class="arrow">→</span>
+        <span class="seat">A</span>
+      </div>
+    </div>
+  </section>
 
-<section class="sec" id="attack"><h2>6 — EVERY MAIN ATTACK RESULT</h2><div class="rule"><b>ONE SHOOT = AT MOST 2 DEFENSE CARDS + 1 DRIBBLE PAST.</b> Only the original attacker may play DRIBBLE PAST, and only after the first DEFENSE. The second DEFENSE ends the attack; no second DRIBBLE PAST or third DEFENSE is allowed. At each response opportunity, the defending team may discuss who plays its one DEFENSE.</div><div class="note"><b>AFTER A GOAL:</b> Normally, give the target +1 Token and the Soccer Card. <b>Goalkeeper exception:</b> if the Goalkeeper already has 2 Tokens and the one-time passive is still unused, the next would-be goal is automatically canceled — add no Token, give the Soccer Card to the Goalkeeper, and mark the passive used. If a later successful goal gives that Goalkeeper the 3rd Token, eliminate the Goalkeeper and stop the game immediately. If a normal PLAYER is eliminated by a 3rd Token, they immediately pass the ball to a living teammate of their choice.</div><div class="attackStack"><article class="attackCase"><h3>A · CLEAN SHOOT</h3><div class="attackFlow"><div class="attackCard"><img src="images/shoot-card.webp" alt="Shoot"><b>SHOOT</b></div><span class="miniArrow">→</span><div class="attackCard"><div style="font-size:35px">🚫</div><b>NO DEFENSE</b></div><span class="miniArrow">→</span><div class="attackCard"><div style="font-size:35px">⚽</div><b>GOAL</b></div></div><div class="attackResult goal">TARGET +1 TOKEN · SOCCER → PLAYER WHO WAS SCORED ON</div></article><article class="attackCase"><h3>B · FIRST DEFENSE — ATTACKER DOES NOT DRIBBLE</h3><div class="attackFlow"><div class="attackCard"><img src="images/shoot-card.webp" alt="Shoot"><b>SHOOT</b></div><span class="miniArrow">→</span><div class="attackCard"><img src="images/defense-card.webp" alt="Defense"><b>DEFENSE</b></div><span class="miniArrow">→</span><div class="attackCard"><div style="font-size:35px">🛑</div><b>STOPPED</b></div></div><div class="attackResult stop">0 TOKENS · SOCCER → PLAYER WHO PLAYED DEFENSE</div></article><article class="attackCase"><h3>C · DRIBBLE BREAKS THROUGH</h3><div class="attackFlow"><div class="attackCard"><img src="images/shoot-card.webp" alt="Shoot"><b>SHOOT</b></div><span class="miniArrow">→</span><div class="attackCard"><img src="images/defense-card.webp" alt="Defense"><b>DEFENSE</b></div><span class="miniArrow">→</span><div class="attackCard"><img src="images/dribble%20past-card.webp" alt="Dribble"><b>DRIBBLE</b></div><span class="miniArrow">→</span><div class="attackCard"><div style="font-size:35px">⚽</div><b>GOAL</b></div></div><div class="attackResult goal">NO SECOND DEFENSE PLAYED · TARGET +1 TOKEN · SOCCER → TARGET</div></article><article class="attackCase"><h3>D · SECOND DEFENSE STOPS IT</h3><div class="attackFlow"><div class="attackCard"><img src="images/shoot-card.webp" alt="Shoot"><b>SHOOT</b></div><span class="miniArrow">→</span><div class="attackCard"><img src="images/defense-card.webp" alt="Defense"><b>DEFENSE</b></div><span class="miniArrow">→</span><div class="attackCard"><img src="images/dribble%20past-card.webp" alt="Dribble"><b>DRIBBLE</b></div><span class="miniArrow">→</span><div class="attackCard"><img src="images/defense-card.webp" alt="Second Defense"><b>2ND DEFENSE</b></div></div><div class="attackResult stop">0 TOKENS · SOCCER → PLAYER WHO PLAYED SECOND DEFENSE</div></article></div><div class="secondDefenseCost"><img src="images/defense-card.webp" alt="Defense"><div><b>SECOND DEFENSE COST</b><p><strong>Play 1 DEFENSE + discard 1 additional Action Card if you still have one.</strong> The first DEFENSE has no extra discard. The second defender pays from their own hand.<br><strong>DEFENSE only:</strong> play it → empty hand → no extra discard.<br><strong>DEFENSE + SHOOT:</strong> play DEFENSE → discard SHOOT too.</p></div></div><div class="rule">After an attack is fully resolved, if it is still your turn and another player now has the Soccer Card, you may legally play TACKLE to take possession and continue with another legal action, such as SHOOT.</div></section>
+  <section class="section" id="referee-cards">
+    <h2>7 — REFEREE CARDS</h2>
+    <p>There are 3 Referee Cards in total: one copy of each ability.</p>
+    <div class="grid">
+      <article class="card"><span class="tag purple">REFEREE CARD · 1 COPY</span><h3>IDENTITY REVEAL <small>(working name)</small></h3><p>Choose one player and reveal that player's Role Card to everyone.</p></article>
+      <article class="card"><span class="tag purple">REFEREE CARD · 1 COPY</span><h3>VAR REVIEW</h3><p>Cancel a goal that was just scored if it is ruled invalid. Remove that goal from the scorer's personal goal total and from the target's conceded-goal total. If it was the 3rd conceded goal, VAR must be used before the Role Card is revealed. VAR may also cancel a Goalkeeper's 4th goal, but it must be used before the game ends.</p></article>
+      <article class="card"><span class="tag purple">REFEREE CARD · 1 COPY</span><h3>PENALTY KICK</h3><p>Use during your own turn. Choose one opponent as the designated defender. The shooter and defender each choose LEFT, CENTER, or RIGHT. If they choose the same direction, the shot fails and the Soccer Card goes to the designated defender. If they choose different directions, the shot scores.</p></article>
+    </div>
+  </section>
 
-<section class="sec" id="yellow"><h2>7 — YELLOW CARD</h2><div class="yellowVisual"><div><img src="images/yellow-card.webp" alt="Yellow"></div><div><h3>YELLOW FOLLOWS THE SEAT ORDER</h3><p>Play YELLOW only during your own normal turn. The next living player in the fixed turn order skips exactly one normal turn. You do not choose a target.</p><h4>EXAMPLE 1 · ALL FOUR PLAYERS ARE STILL IN</h4><div class="skipLine"><div class="seat blue">BLUE 1<small>PLAYS YELLOW</small></div><div class="flowArrow">→</div><div class="seat green">GREEN 1<small>SKIPS ONE TURN</small></div><div class="flowArrow">→</div><div class="seat blue">BLUE 2<small>PLAY CONTINUES HERE</small></div><div class="flowArrow">→</div><div class="seat green">GREEN 2<small>NEXT AFTER BLUE 2</small></div></div><h4>EXAMPLE 2 · GREEN 1 HAS ALREADY BEEN ELIMINATED</h4><div class="skipLine"><div class="seat blue">BLUE 1<small>PLAYS YELLOW</small></div><div class="flowArrow">→</div><div class="seat dead">GREEN 1<small>ALREADY OUT</small></div><div class="flowArrow">→</div><div class="seat blue">BLUE 2<small>SKIPS ONE TURN</small></div><div class="flowArrow">→</div><div class="seat green">GREEN 2<small>PLAY CONTINUES HERE</small></div></div><p>In Example 2, BLUE 2 is the next living player, so YELLOW skips that teammate. The seating order has not changed.</p></div></div><div class="rule"><b>YELLOW DOES NOT STACK:</b> Play 1, 2, or 3 YELLOW cards on the same turn → the same next living player still skips only 1 normal turn. Extra YELLOW cards never affect the second or third player after you.</div><div class="yellowFacts"><div class="fact">The skipped player does not draw a card for that turn.</div><div class="fact">The skipped player cannot PASS, SHOOT, TACKLE, play DRIBBLE PAST, or take any other normal action on that turn.</div><div class="fact">The skipped player is still in the game and may play DEFENSE as a reaction if their team is attacked.</div><div class="fact">After the skipped player's turn, continue to the next living player in the fixed turn order.</div></div></section>
+  <section class="section" id="rewards">
+    <h2>8 — HOW TO EARN MATCH & REFEREE CARDS</h2>
+    <p>Match and Referee Cards are limited special rewards. When you meet a reward condition, choose 1 available card from either category.</p>
+    <div class="grid">
+      <article class="card">
+        <span class="tag green">REWARD 1 · IDENTITY</span>
+        <h3>REVEAL YOURSELF WITH 0 GOALS CONCEDED</h3>
+        <p>If you have not conceded any goals, you may voluntarily reveal your own Role Card and choose 1 Match Card or Referee Card. Revealing your identity as part of using your own Role skill also qualifies.</p>
+        <p><strong>Once per player.</strong> This reward is not available if you have already conceded 1 or more goals.</p>
+      </article>
+      <article class="card">
+        <span class="tag green">REWARD 2 · SCORING</span>
+        <h3>REACH 3 PERSONAL GOALS</h3>
+        <p>When you personally score your 3rd valid goal, choose 1 available Match Card or Referee Card.</p>
+        <p><strong>Once per player at this milestone.</strong></p>
+      </article>
+      <article class="card">
+        <span class="tag green">REWARD 3 · SCORING</span>
+        <h3>REACH 6 PERSONAL GOALS</h3>
+        <p>When you personally score your 6th valid goal, choose 1 more available Match Card or Referee Card.</p>
+        <p><strong>Once per player at this milestone.</strong></p>
+      </article>
+    </div>
+    <div class="rule"><strong>MAXIMUM: 3 SPECIAL CARDS PER PLAYER.</strong> One for revealing your identity with 0 goals conceded, one at 3 personal goals, and one at 6 personal goals.</div>
+    <ul>
+      <li>Special cards are limited. Players who qualify earlier choose first.</li>
+      <li>If all Match Cards are gone, choose from the remaining Referee Cards. If all Referee Cards are gone, choose from the remaining Match Cards.</li>
+      <li>If both supplies are empty when you qualify, no special card can be claimed.</li>
+      <li>A goal canceled by VAR REVIEW does not count toward either player's goal totals or reward milestones.</li>
+      <li>An identity revealed by another player using IDENTITY REVEAL does not earn the revealed player the voluntary-reveal reward.</li>
+    </ul>
+  </section>
 
-<section class="sec" id="tokens"><h2>8 — TOKENS, ELIMINATION & ROLE REVEAL</h2>
-<div class="visualTitle">HIDDEN FROM OPPONENTS WHILE STILL IN THE GAME</div>
-<div class="gkVisual"><img src="images/goalkeeper-card.webp" alt="Hidden Role Card"><div><h3>TEAMMATES MAY KNOW · OPPONENTS DO NOT</h3><p>Every player’s Role Card stays hidden from opponents while that player is still in the game. Teammates may privately share their roles. <b>0 Tokens = hidden. 1 Token = hidden. 2 Tokens = still hidden.</b></p></div></div>
+  <section class="section" id="substitution">
+    <h2>9 — SUBSTITUTION: ROLE SWAP EXAMPLE</h2>
+    <p>When two teammates use SUBSTITUTION, they exchange Role Cards. Their personal goal records and identity status do not move.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>BEFORE THE SWAP</h3>
+        <p><strong>Player A:</strong> GOALKEEPER · 0 goals conceded · identity hidden.</p>
+        <p><strong>Player B:</strong> PLAYER · 3 goals conceded · identity revealed.</p>
+      </article>
+      <article class="card">
+        <h3>AFTER THE SWAP</h3>
+        <p><strong>Player A:</strong> PLAYER · still 0 goals conceded · still hidden.</p>
+        <p><strong>Player B:</strong> GOALKEEPER · still 3 goals conceded · still revealed. The next goal conceded is the 4th, so Player B is eliminated.</p>
+      </article>
+    </div>
+    <div class="info"><strong>THE RECORD STAYS WITH THE PERSON, NOT THE ROLE CARD.</strong> A revealed player remains revealed after a role swap. A player who becomes the Goalkeeper uses their own existing conceded-goal total to determine whether they have reached the 4-goal elimination threshold.</div>
+  </section>
 
-<div class="visualTitle">NORMAL PLAYER — THIRD TOKEN ELIMINATES</div>
-<div class="gkPassive"><div class="gkStep">0 TOKENS · HIDDEN</div><div class="flowArrow">→</div><div class="gkStep">1 TOKEN · HIDDEN</div><div class="flowArrow">→</div><div class="gkStep">2 TOKENS · STILL HIDDEN</div><div class="flowArrow">→</div><div class="gkStep hot">3RD TOKEN · OUT</div><div class="flowArrow">→</div><div class="gkStep safe">REVEAL ROLE</div></div>
+  <section class="section" id="possession">
+    <h2>10 — SOCCER CARD, PASS & TACKLE</h2>
+    <div class="grid">
+      <article class="card"><h3>SOCCER CARD = POSSESSION</h3><p>The Soccer Card replaces the mini soccer piece. The player holding it has possession. It stays outside the Action deck and moves when possession changes.</p></article>
+      <article class="card"><h3>PASS IS FREE</h3><p>During your own turn, if you hold the Soccer Card, you may pass it to a living teammate without spending a card. The receiver gains possession but does not take an immediate turn.</p></article>
+      <article class="card"><h3>TACKLE CAN TARGET ANY PLAYER</h3><p>On your turn, use TACKLE to take the Soccer Card from any player, including someone on your own team.</p></article>
+      <article class="card"><h3>KEEP TWO GOAL TOTALS</h3><p>Conceded goals determine identity reveal and Goalkeeper elimination. Personal goals scored determine special rewards at 3 and 6 goals. Do not combine these totals.</p></article>
+    </div>
+  </section>
 
-<div class="visualTitle">GOALKEEPER — THIRD GOAL IS AUTO-SAVED ONCE</div>
-<div class="gkPassive"><div class="gkStep">GOAL 1 · TOKEN 1</div><div class="flowArrow">→</div><div class="gkStep">GOAL 2 · TOKEN 2 · PASSIVE ARMED</div><div class="flowArrow">→</div><div class="gkStep safe">GOAL 3 · AUTO-SAVE · NO TOKEN</div><div class="flowArrow">→</div><div class="gkStep hot">NEXT SUCCESSFUL GOAL · TOKEN 3 · OUT</div></div>
+  <section class="section" id="final-notes">
+    <h2>11 — STILL TO BE FINALIZED</h2>
+    <ul>
+      <li>The exact number of each Role Card and Action Card.</li>
+      <li>The number of copies for each Match Card.</li>
+      <li>The final effect and quantity of YELLOW CARD!.</li>
+      <li>The exact resolution of the FORWARD's RUN action conversion.</li>
+      <li>The remaining timing and interaction details for the Action Cards.</li>
+      <li>The physical method for tracking each player's goals conceded and personal goals scored.</li>
+    </ul>
+    <div class="warning">These items are intentionally left open rather than carrying over old rules that have not been approved for the new edition.</div>
+  </section>
 
-<ul>
-<li><strong>Normal PLAYER:</strong> when the player receives the 3rd Token, eliminate that player first, then reveal the Role Card to opponents.</li>
-<li><strong>GOALKEEPER at 2 Tokens:</strong> the one-time passive is armed automatically.</li>
-<li><strong>Next opponent attack that would score on that Goalkeeper:</strong> the passive automatically cancels it once. The Goalkeeper does <b>not</b> receive a 3rd Token. Give the Soccer Card to the Goalkeeper and mark the passive used.</li>
-<li><strong>After the passive has been used:</strong> the next successful goal gives the Goalkeeper the 3rd Token. Eliminate the Goalkeeper, reveal the Role Card, and that team loses immediately.</li>
-<li><strong>If an eliminated role is PLAYER:</strong> that player immediately passes the Soccer Card to a living teammate of their choice and gives their remaining Action Cards to a living teammate. This handoff is allowed outside their own turn. Skip their seat from then on and continue the current turn; the recipient does not get an extra turn. The eliminated player may still talk with teammates and give advice, but may not take turns or play cards.</li>
-</ul>
-<div class="warn"><b>IMPORTANT GOALKEEPER EXCEPTION:</b> The Goalkeeper is <u>not</u> eliminated by the third would-be goal when the passive is still unused. That goal is canceled, no Token is added, and the Goalkeeper stays in the game. In a clean sequence with no other stops: Goal 1 → Token 1, Goal 2 → Token 2, Goal 3 → AUTO-SAVE / NO TOKEN, Goal 4 → Token 3 / OUT.</div>
-<div class="warn"><b>ROLE VISIBILITY:</b> Teammates may privately share roles at any time. Opponents see a Role Card only after that player is actually eliminated.</div>
-</section>
-
-<section class="sec" id="edge"><h2>9 — WHAT IF SOMETHING RUNS OUT?</h2><div class="edgeGrid"><article class="edgeCard"><span class="ico">🔄</span><b>DRAW PILE EMPTY</b><p>Shuffle all Action Cards from the Discard Pile into a new face-down Draw Pile, then continue drawing normally. Never shuffle Role Cards, the Soccer Card, Tokens, cards in players' hands, or cards that are currently resolving.</p></article><article class="edgeCard"><span class="ico">0️⃣</span><b>YOU HAVE 0 CARDS</b><p>You are still in the game. At the start of your next normal turn, draw 1 card first. If you have the Soccer Card, you may still PASS because PASS does not require a card — but you may PASS only during your own turn.</p></article><article class="edgeCard"><span class="ico">🛡️</span><b>SECOND DEFENSE = LAST CARD</b><p>That is legal. Play DEFENSE. If that leaves your hand empty, you do not have to pay the extra discard.</p></article></div></section>
-
-<section class="sec" id="faq"><h2>10 — QUICK FAQ</h2><div class="faqGrid"><div class="faq"><b>CAN A TEAMMATE PLAY DEFENSE FOR ME?</b><span>Yes. Any living teammate may play DEFENSE for you.</span></div><div class="faq"><b>WHO CHOOSES THE DEFENDER?</b><span>The target and living teammates discuss and choose one player.</span></div><div class="faq"><b>DOES THE SAME PLAYER HAVE TO PLAY DEFENSE TWICE?</b><span>No. The target and living teammates may agree on a different defender for the second DEFENSE.</span></div><div class="faq"><b>CAN DEFENSE STOP TACKLE?</b><span>No.</span></div><div class="faq"><b>CAN YELLOW SKIP MY TEAMMATE?</b><span>Yes.</span></div><div class="faq"><b>CAN A PLAYER WHO WAS SKIPPED BY YELLOW STILL PLAY DEFENSE?</b><span>Yes. DEFENSE is a reaction card.</span></div><div class="faq"><b>DOES PASS CHANGE WHOSE TURN IT IS?</b><span>No. Normal PASS is free and allowed only during the Soccer holder’s own turn. An eliminated PLAYER immediately hands the ball to a living teammate as an exception; this does not start the recipient’s turn.</span></div><div class="faq"><b>WHAT HAPPENS TO AN ELIMINATED PLAYER'S HAND?</b><span>Give the eliminated player's remaining Action Cards to a living teammate. If they received the Soccer Card from that goal, they immediately pass it to a living teammate of their choice before play continues. This elimination handoff is allowed outside their own turn and does not start the recipient’s turn. The eliminated player may continue giving advice, but may not take turns or play cards.</span></div><div class="faq"><b>DOES LOSING POSSESSION END MY TURN?</b><span>No. You may use TACKLE to regain possession and keep taking legal actions until you say “END TURN.”</span></div><div class="faq"><b>DOES THE GOALKEEPER GO OUT ON THE THIRD GOAL?</b><span>Not if the one-time passive is still unused. At 2 Tokens, the next would-be scoring goal is auto-saved once, adds no Token, and gives Soccer to the Goalkeeper. The following successful goal gives the 3rd Token and eliminates the Goalkeeper.</span></div></div><div class="warn">GOALKEEPER ELIMINATED = GAME OVER IMMEDIATELY.</div></section>
-<a class="back" href="index.html">BACK TO MODES</a>
+  <a class="back" href="index.html">← BACK TO ALL GAME MODES</a>
+  <div class="footer">SOCCER PARTY CARD GAME · NEW EDITION · STRATEGY MODE</div>
 </main>
-
-</body></html>
+</body>
+</html>
